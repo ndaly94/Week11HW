@@ -79,3 +79,7 @@ exports.deleteToDo = async (req, res) => {
         res.status(400).json({ message: error.message })
     }
 }
+
+app.listen(PORT, () => {
+    console.log("No one likes tests, except us nerds")
+})
