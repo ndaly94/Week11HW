@@ -35,14 +35,25 @@ function findMax(arr, index = 0, largestNum = 0) {
   }
 }
 
-function factorial() {
+function factorial(num) {
   // This function returns the factorial of a given number.
+  // must start with one as it is the multiplicative identity. 
+  let result = 1;
+  while (num > 1) {
+    result = result * num;
+    num -= 1;
+  }
+  return result;
 }
 
-function fibonacci() {
+function fibonacci(n) {
   // This function returns the Nth number in the fibonacci sequence.
   // https://en.wikipedia.org/wiki/Fibonacci_number
   // For this function, the first two fibonacci numbers are 1 and 1
+  if (n == 0 || n == 1)
+  return n;
+
+  return fibonacci(n-1) + fibonacci(n-2);
 }
 
 function coinFlips() {
