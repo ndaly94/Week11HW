@@ -14,12 +14,25 @@ function lengthOfString(str, len = 0) {
   return lengthOfString(restOfString, ++len);
 }
 
-function sumOfArray() {
+function sumOfArray(arr, index = 0, sum = 0) {
   // This function returns the sum of all of the numbers in a given array.
+  if(index === arr.length){
+    return sum;
+  }
+  sum += arr[index];
+  return sumArrayOfNums(arr, index +1, sum);
 }
 
-function findMax() {
+function findMax(arr, index = 0, largestNum = 0) {
   // This function returns the largest number in a given array.
+  if(index === arr.length){
+    return largestNum;
+  }
+  if(arr[index] > largestNum) {
+    largestNum = arr[index];
+  } else {
+    return findMax(arr, index +1, largestNum);
+  }
 }
 
 function factorial() {
