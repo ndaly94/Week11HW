@@ -1,0 +1,14 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 10
+      arrivalRate: 2
+scenarios:
+  - flow:
+      - post:
+          url: "/toDo"
+          json:
+            title: "Test"
+            description: "Test-User"
+            completed: true
+            created_at: "10/12/2393"
